@@ -3,5 +3,25 @@
 	</head>
 	<body>
 		<h1>new test</h1>
+		<%= form_for :test, url: tests_path do |f| %>
+		  <p>
+		    <%= f.label :name %><br>
+		    <%= f.text_field :name %>
+		  </p>
+		 
+		  <p>
+		    <%= f.label :path %><br>
+		    <%= f.text_area :path %>
+		  </p>
+
+		  <p>
+		    <%= f.label :scale %><br>
+		    <%= f.text_area :scale %>
+		  </p>
+		 
+		  <p>
+		    <%= f.submit %>
+		  </p>
+		<% end %>
 	</body>
 </html>

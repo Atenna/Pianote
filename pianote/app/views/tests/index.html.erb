@@ -1,0 +1,20 @@
+<%= render :partial => '/shared/head' %>
+<body>
+  <h1>Listing notes</h1>
+   
+  <table>
+    <tr>
+      <th>Note</th>
+      <th></th>
+    <!--  <th></th> -->
+    </tr>
+   
+    <% @tests.each do |test| %>
+      <tr>
+        <td><%= test.name %></td>
+        <td><%= link_to image_tag("#{test.path}") %></td>
+      <!--  <td><%= test.scale %></td> -->
+      </tr>
+    <% end %>
+  </table>
+</body>
