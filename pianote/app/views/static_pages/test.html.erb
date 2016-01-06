@@ -23,7 +23,9 @@
 
 <script>
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
+    $('[data-toggle="tooltip"]').tooltip();  
+    var item = document.getElementById("practice")
+    item.setAttribute("class", "active") 
 });
 
 function check(){
@@ -31,7 +33,7 @@ function check(){
     	var elem = document.createElement("div");
     	elem.setAttribute("class", "alert alert-success");
     	elem.setAttribute("role", "alert");
-    	var text = document.createTextNode("This is a div element.");
+    	var text = document.createTextNode("Correct!");
     	elem.appendChild(text);
     	document.body.appendChild(elem);
     } else {

@@ -1,6 +1,6 @@
 <%= render :partial => '/shared/head' %>
 <%= render :partial => '/shared/menu' %>
-		<h1>new test</h1>
+		<h1>New note</h1>
 		<%= form_for :test, url: tests_path do |f| %>
 		  <p>
 		    <%= f.label :name %><br>
@@ -18,8 +18,14 @@
 		  </p>
 		 
 		  <p>
-		    <%= f.submit %>
+		    <%= f.submit "Save note" %>
 		  </p>
 		<% end %>
+<script>
+	$(document).ready(function() {
+		var item = document.getElementById("add");
+		item.setAttribute("class", "active");
+	});
+</script>
 	</body>
 </html>
