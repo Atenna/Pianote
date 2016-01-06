@@ -1,0 +1,48 @@
+<%= render :partial => '/shared/head' %>
+<%= render :partial => '/shared/menu' %>
+
+<h1>How is called this note?</h1>
+
+<i data-toggle="tooltip" data-placement="right" title="<%= @question.name %>">
+	<%= link_to image_tag("#{@question.path}") %></i>
+<div class="form">
+	<% @answers.each do |pick| %>
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" id="<%= pick.to_s %>"><%= pick.to_s %>
+	    </label>
+	  </div>
+	<% end %>
+  <button onclick="check()" class="btn btn-default">Submit</button>
+</div>
+<nav>
+  <ul class="pager">
+    <li><%= link_to "Next", static_pages_test_path %></li>
+  </ul>
+</nav>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
+function check(){
+    if (document.getElementById("<%= @question.name %>").checked) {
+    	var elem = document.createElement("div");
+    	elem.setAttribute("class", "alert alert-success");
+    	elem.setAttribute("role", "alert");
+    	var text = document.createTextNode("This is a div element.");
+    	elem.appendChild(text);
+    	document.body.appendChild(elem);
+    } else {
+    	var elem = document.createElement("div");
+    	elem.setAttribute("class", "alert alert-danger");
+    	elem.setAttribute("role", "alert");
+    	var text = document.createTextNode("Sorry, it is <%= @question.name%>");
+    	elem.appendChild(text);
+    	document.body.appendChild(elem);
+	}
+}
+</script>
+
+</body>

@@ -1,3 +1,6 @@
+<%= render :partial => '/shared/head' %>
+<%= render :partial => '/shared/menu' %>
+
 <p>
   <strong>Name:</strong>
   <%= @test.name %>
@@ -12,3 +15,9 @@
   <strong>Type:</strong>
   <%= @test.scale %>
 </p>
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>
+
+</body>
+</html>

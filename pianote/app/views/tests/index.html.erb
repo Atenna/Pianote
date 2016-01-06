@@ -1,4 +1,5 @@
 <%= render :partial => '/shared/head' %>
+<%= render :partial => '/shared/menu' %>
 <body>
   <h1>Listing notes</h1>
    
@@ -13,8 +14,12 @@
       <tr>
         <td><%= test.name %></td>
         <td><%= link_to image_tag("#{test.path}") %></td>
-      <!--  <td><%= test.scale %></td> -->
+        <td><%= link_to 'Show', test_path(test) %></td>
+        <td><%= link_to 'Destroy', test_path(test),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </table>
 </body>
+</html>
