@@ -3,6 +3,7 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( a_0.jpg )
+Rails.application.config.assets.precompile += %w( logo.png )
 #Rails.application.config.assets.precompile += %w( D.jpg )
 
 # Add additional assets to the asset load path
