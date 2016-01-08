@@ -34,11 +34,13 @@ summary {
   font-family: Impact, Tahoma, sans-serif;
 }
 .welcome_header {
-  background-color:
-  height: 300;
-  width: 300;
+  height: 200px;
+  width: 200px;
   border-radius: 100%;
-  background-color: gray;
+  background-color: #ffe5f0;
+}
+.welcome_header > h2 {
+  padding-top: 50px;
 }
 audio,
 canvas,
